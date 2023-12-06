@@ -5,6 +5,10 @@
     cursor: url("./ressources/curseur/curseur.png"), auto;
 }
 
+:root {
+    --clr: #FFEECC;
+}
+
 body{
     background-color: black;
 }
@@ -26,7 +30,7 @@ body{
     background-color: black;
 }
 
-ul li {
+.liste .item {
     display: inline-block;
     list-style: none;
     font-size: 1.3rem;
@@ -36,7 +40,7 @@ ul li {
 }
 
 a,a:visited{
-    color: #ffeecc;
+    color: var(--clr);
     text-decoration: none;
 }
 
@@ -76,10 +80,6 @@ a,a:visited{
     line-height: 40px;
 }
 
-:root {
-    --clr: #FFEECC;
-}
-
 .text {
     color: transparent;
     -webkit-text-stroke: 1px rgba(255, 255, 255, 0.6);
@@ -93,7 +93,7 @@ a,a:visited{
     width: 0%;
     color: var(--clr);
     overflow: hidden;
-    border-right: 6px solid var(--clr);
+    border-right: 2px solid var(--clr);
     transition: 0.5s ease-in-out;
 }
 
@@ -105,3 +105,30 @@ a,a:visited{
 .typescript:hover .text {
     -webkit-text-stroke: 1px rgba(255, 255, 255, 0);
 }
+
+/****************/
+/*****NAV BAR****/
+/****************/
+
+.item:after , .item:before{
+    content: '';
+    width: 0;
+    height: 1.5px;
+    background: var(--clr);
+    position: absolute;
+    transition: all 0.3s;
+}
+
+.item:before {
+    left: 0px;
+    top: -5px;
+}
+
+.item:after{
+    right: 0px;
+    bottom: -5px;
+}
+
+.item:hover:after, .item:hover:before {
+    width: 100%;
+
