@@ -1,36 +1,49 @@
-/*@keyframes blink {
-    0%,100% {
-        filter: blur(6em) opacity(90%);
-    }
-    50%{
-        filter: blur(6em) opacity(70%);
-    }
-}
-*{
+@import url('https://fonts.google.com/css?family=Space+Mono');
 
-}*/
+*{
+    color: white;
+    background: black;
+    cursor: url("./ressources/curseur/curseur.png"), auto;
+}
+
+.logo{
+    text-align: center;
+    justify-content: center;
+}
+
+.logo > img {
+    width: 7%;
+    height: 7%;
+}
+
 .navbar{
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
 ul li {
     display: inline-block;
     list-style: none;
-    font-size: 1rem;
-    padding: 0 10px;
-    margin: 0 20px;
+    font-size: 1.3rem;
+    padding: 0 15px;
+    margin: 0 10px;
     position: relative;
 }
+
 a,a:visited{
+    color: #ffeecc;
     text-decoration: none;
 }
+
 .under-dev{
+    margin-top: 12%;
     text-align: center;
     font-size: x-large;
     font-weight: bold;
     justify-content: center;
 }
+
 .container{
     widows: 100%;
     height: 100%;
