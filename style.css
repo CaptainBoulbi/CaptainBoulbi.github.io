@@ -1,12 +1,14 @@
 @import url('https://fonts.google.com/css?family=Space+Mono');
 
+:root {
+    --clr: #FFEECC;
+    --font: MonoSpace;
+}
+
 *{
     color: white;
     cursor: url("./ressources/curseur/curseur.png"), auto;
-}
-
-:root {
-    --clr: #FFEECC;
+    font-family: var(--font);
 }
 
 body{
@@ -39,7 +41,7 @@ body{
     position: relative;
 }
 
-a,a:visited{
+.home-link,.home-link:visited{
     color: var(--clr);
     text-decoration: none;
 }
@@ -69,15 +71,15 @@ a,a:visited{
     background-color: #000000;
     display: grid;
     place-items: center;
-    font-family: "Kanit", sans-serif;
+    font-family: var(--font), serif;
 }
 
 .typescript {
     position: relative;
-    font-size: 2.5rem;
+    font-size: 3rem;
     text-transform: uppercase;
     letter-spacing: 3px;
-    line-height: 40px;
+    line-height: 50px;
 }
 
 .text {
@@ -99,7 +101,7 @@ a,a:visited{
 
 .typescript:hover .hover-text {
     width: 100%;
-    filter: drop-shadow(0 0 20px var(--clr));
+    filter: drop-shadow(0 0 25px var(--clr));
 }
 
 .typescript:hover .text {
@@ -131,4 +133,16 @@ a,a:visited{
 
 .item:hover:after, .item:hover:before {
     width: 100%;
+}
 
+/****************/
+/******IDEES*****/
+/****************/
+.idea-link{
+    color: white;
+    text-decoration: none;
+}
+.idea-link:hover{
+    text-decoration: underline white;
+    color: white;
+}
