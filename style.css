@@ -171,11 +171,15 @@ body{
     color: white;
 }
 
+.contenu {
+    width: 75rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5rem;
+}
+
 .bloc-desc{
-    border: 0.175em solid white ;
-    border-radius:30px ;
     overflow: hidden;
-    margin: auto;
 }
 
 .desc{
