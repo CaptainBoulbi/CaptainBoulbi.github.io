@@ -161,6 +161,7 @@ body{
 /****************/
 /******IDEES*****/
 /****************/
+
 .idea-link{
     color: white;
     text-decoration: none;
@@ -168,4 +169,19 @@ body{
 .idea-link:hover{
     text-decoration: underline white;
     color: white;
+}
+
+.bloc-desc{
+    border: 0.175em solid white ;
+    border-radius:30px ;
+    overflow: hidden;
+    margin: auto;
+}
+
+.desc{
+    font-size: 1.3em;
+}
+
+.title{
+    font-size: 150%;
 }
