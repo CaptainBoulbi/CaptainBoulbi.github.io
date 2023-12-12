@@ -185,3 +185,20 @@ body{
 .title{
     font-size: 150%;
 }
+
+/****************/
+/******PREZ******/
+/****************/
+
+.id{
+    height: 9%;
+    width: 9%;
+    border: 0.175em solid white;
+    border-radius: 700px;
+    overflow: hidden;
+    margin: 1%;
+}
+
+.right{
+    
+}
