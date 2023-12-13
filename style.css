@@ -190,6 +190,7 @@ body{
 /***ID CARD**/
 /************/
 .table-id{
+    perspective: 1000px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 30px;
@@ -221,19 +222,23 @@ body{
     border-radius: 12.8px;
     text-align: center;
     border: 1px solid #FFEECC;
-    transition: 1s ease-in-out;
     transform-style: preserve-3d;
     backface-visibility: hidden;
 }
 
 .card--back {
-    transform: rotateY(0.5turn);
+    transform: rotateY(180deg);
+    transform-style: preserve-3d;
+    transition: transform 1s;
     backface-visibility: hidden;
 }
 
 .card:hover {
     box-shadow: rgba(255, 255, 255, 0.5) 0px 6px 12px;
-    transform: rotateY(0.5turn);
+    
+    transform: rotateY(180deg);
+    transform-style: preserve-3d;
+    transition: transform 1s;
 }
 .card img{
     width: 300px;
