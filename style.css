@@ -192,7 +192,7 @@ body{
 .table-id{
     perspective: 2000px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-gap: 30px;
     grid-auto-rows: minmax(100px, auto);
 }
@@ -209,6 +209,16 @@ body{
 
 .third{
     grid-column: 3;
+    grid-row: 1;
+}
+
+.fourth{
+    grid-column: 4;
+    grid-row: 1;
+}
+
+.fifth{
+    grid-column: 5;
     grid-row: 1;
 }
 
