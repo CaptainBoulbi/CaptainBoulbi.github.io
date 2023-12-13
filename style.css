@@ -1,5 +1,3 @@
-@import url('https://fonts.google.com/css?family=Space+Mono');
-
 :root {
     --clr: #FFEECC;
     --font: MonoSpace;
@@ -85,12 +83,14 @@ body{
 .text {
     color: transparent;
     -webkit-text-stroke: 1px rgba(255, 255, 255, 0.6);
+    margin: 0;
     transition: 0.1s ease;
-    transition-delay: 0.45s;
+    transition-delay: 0.55s;
 }
 
 .hover-text {
     position: absolute;
+    margin: 0;
     inset: 0;
     width: 0%;
     color: var(--clr);
@@ -108,9 +108,9 @@ body{
     -webkit-text-stroke: 1px rgba(255, 255, 255, 0);
 }
 
-/*****************/
-/******LOADER*****/
-/*****************/
+/******************/
+/******LOADER******/
+/******************/
 
 .loader {
     margin-top: 3%;
