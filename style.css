@@ -232,6 +232,8 @@ body{
     grid-row: 1;
 }
 
+/*********Cartes*********/
+
 .card{
     margin-top: 5%;
     margin-bottom: 5%;
@@ -241,22 +243,23 @@ body{
     align-items: center;
     border-radius: 12.8px;
     border: 1px solid #FFEECC;
+}
+
+.card.is-flipped{
     transform-style: preserve-3d;
+    transform-origin: center right;
     backface-visibility: hidden;
+    transition: transform 1s;
+    transform: translateX(-100%) rotateY(-180deg);
 }
 
 .card--back {
     transform: rotateY(180deg);
-    transform-style: preserve-3d;
-    transition: transform 1s;
     backface-visibility: hidden;
-    border: 1px solid #FFEECC;
 }
 
 .card:hover {
     box-shadow: rgba(255, 255, 255, 0.5) 0px 8px 16px;
-    border: 1px solid #FFEECC;
-    transform: rotateY(180deg);
     transform-style: preserve-3d;
     transition: transform 1s;
 }
@@ -264,15 +267,18 @@ body{
     width: 300px;
     height: 300px;
     object-fit:cover;
-    border-radius:  12.8px;
+    border-radius: 12.8px 12.8px 0px 0px;
 }
+
+/******Id******/
+
 .content {
     flex: 1 1 90%;
     display: flex;
     flex-direction: column;
     justify-content: start;
     padding: 8.6px;
-    border-radius:  12.8px;
+    border-radius: 0px 0px 12.8px 12.8px;
     background-color: gray;
 }
 .content h2{
