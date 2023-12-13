@@ -60,6 +60,16 @@ body{
     justify-content: center;
 }
 
+.footer{
+    margin-top: 20%;
+    text-align: center;
+    justify-content: center;
+    padding-top: 1%;
+    font-size: 1.5rem;
+    height: 10vh;
+    border: 0.5px var(--clr) solid;
+    border-radius: 25px;
+}
 /****************/
 /***TYPESCRIPT***/
 /****************/
@@ -192,7 +202,7 @@ body{
 .table-id{
     perspective: 2000px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 150px 300px 300px 300px 150px;
     grid-gap: 30px;
     grid-auto-rows: minmax(100px, auto);
 }
@@ -230,7 +240,6 @@ body{
     justify-content: center;
     align-items: center;
     border-radius: 12.8px;
-    text-align: center;
     border: 1px solid #FFEECC;
     transform-style: preserve-3d;
     backface-visibility: hidden;
@@ -287,9 +296,6 @@ body{
 
 .infos {
     display: flex;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
     gap: 6.4px;
     flex-wrap: wrap;
     list-style-type: none;
