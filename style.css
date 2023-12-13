@@ -186,20 +186,155 @@ body{
     font-size: 150%;
 }
 
-/****************/
-/******PREZ******/
-/****************/
-
-.id{
-    height: 9%;
-    width: 9%;
-    border: 0.175em solid white;
-    border-radius: 700px;
-    overflow: hidden;
-    margin: 1%;
+/************/
+/***ID CARD**/
+/************/
+.table-id{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 30px;
+    grid-auto-rows: minmax(100px, auto);
 }
 
-.right{
-    
+.first{
+    grid-column: 1;
+    grid-row: 1;
 }
 
+.second{
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.third{
+    grid-column: 3;
+    grid-row: 1;
+}
+
+.card{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    height: auto;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12.8px;
+    text-align: center;
+    border: 1px solid #FFEECC;
+    transition: 1s ease-in-out;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+}
+
+.card--back {
+    transform: rotateY(0.5turn);
+    backface-visibility: hidden;
+}
+
+.card:hover {
+    box-shadow: rgba(255, 255, 255, 0.5) 0px 6px 12px;
+    transform: rotateY(0.5turn);
+}
+.card img{
+    width: 300px;
+    height: 300px;
+    object-fit:cover;
+    border-radius:  12.8px;
+}
+.content {
+    flex: 1 1 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding: 8.6px;
+    border-radius:  12.8px;
+    background-color: gray;
+}
+.content h2{
+    font-size: 1.25rem;
+    font-weight: 560;
+    margin-bottom: 1%;
+    color: black;
+}
+.content h2:hover{
+    color: white;
+}
+.content p {
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 3.2px 0;
+    color: black;
+}
+.content p:hover{
+    color: white;
+}
+
+.infos {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    gap: 6.4px;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 6.4px 0 9.6px 0;
+}
+
+.info {
+    border-radius: 6.4px;
+    padding: 4.8px;
+    font-size: 9.6px;
+    background-color: white;
+    color: black;
+    transition: all 0.3s;
+    font-weight: 560;
+    border: 1px solid #FFEECC;
+}
+
+.info:hover {
+    background-color: black;
+    color: white;
+    border: 1px solid #FFEECC;
+}
+
+.btn {
+    border-top: 0.8px solid gray;
+    padding-top: 9.6px;
+    gap: 6.4px;
+    display: flex;
+    margin-top: auto;
+    flex-wrap: wrap;
+}
+
+.btn a {
+    background-color: white;
+    color: black;
+    padding: 8px;
+    text-decoration: none;
+    border-radius: 6.4px;
+    outline: none;
+    border: none;
+    font-size: 11.2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+    flex: 1 0 144px;
+    max-width: 100%;
+    border: 1px solid #FFEECC;
+}
+
+.btn a:hover {
+    text-decoration: underline;
+    background-color: black;
+    color: white;
+    border: 1px solid #FFEECC;
+}
+
+.btn a .learn {
+    background-color: inherit;
+    color: rgb(75, 2, 75);
+    border: 0.8px solid rgb(75, 2, 75);
+    flex: 1 0 48px;
+    border: 1px solid #FFEECC;
+}
