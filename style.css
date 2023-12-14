@@ -235,9 +235,9 @@ body{
 /*********Cartes*********/
 
 .card{
+    width: 300px;
     margin-top: 5%;
     margin-bottom: 5%;
-    height: auto;
     display: block;
     justify-content: center;
     align-items: center;
@@ -245,29 +245,18 @@ body{
     border: 1px solid #FFEECC;
 }
 
-.card.is-flipped{
-    transform-style: preserve-3d;
-    transform-origin: center right;
-    backface-visibility: hidden;
-    transition: transform 1s;
-    transform: translateX(-100%) rotateY(-180deg);
-}
-
-.card--back {
-    transform: rotateY(180deg);
-    backface-visibility: hidden;
-}
-
 .card:hover {
-    box-shadow: rgba(255, 255, 255, 0.5) 0px 8px 16px;
-    transform-style: preserve-3d;
-    transition: transform 1s;
+    box-shadow: 0px 0px 10px #fff,
+                 0px 0px 20px #fff,
+                 0px 0px 30px #fff;
 }
+
 .card img{
     width: 300px;
     height: 300px;
     object-fit:cover;
     border-radius: 12.8px 12.8px 0px 0px;
+    background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
 }
 
 /******Id******/
@@ -367,23 +356,8 @@ body{
     border: 1px solid #FFEECC;
 }
 
-.back-nemo{
-    margin-top: -450px;
+.quote{
     background-color: black;
-    height: 300px;
-    font-size: 1.3rem;
-}
-
-.back-mrmoi{
-    margin-top: -450px;
-    background-color: black;
-    height: 300px;
-    font-size: 1.3rem;
-}
-
-.back-canard{
-    margin-top: -450px;
-    background-color: black;
-    height: 300px;
+    height: 230px;
     font-size: 1.3rem;
 }
