@@ -60,8 +60,7 @@ body{
     justify-content: center;
 }
 
-.footer{
-    margin-top: 20%;
+.prez{
     text-align: center;
     justify-content: center;
     padding-top: 1%;
@@ -233,6 +232,7 @@ body{
 /******Id******/
 
 .content {
+    text-align: left;
     flex: 1 1 90%;
     display: flex;
     flex-direction: column;
@@ -286,6 +286,7 @@ body{
 }
 
 .btn {
+    text-align: center;
     border-top: 0.8px solid gray;
     padding-top: 9.6px;
     gap: 6.4px;
@@ -328,7 +329,43 @@ body{
 }
 
 .quote{
+    margin: none;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: left;
     background-color: black;
     height: 230px;
+    width: 280px;
     font-size: 1.3rem;
+}
+
+/***********************************/
+/**********PRESENTATION CORP********/
+/***********************************/
+
+.prez{
+    text-align: left;
+    width: 30%;
+    height: 100%;
+    padding-left: 2% ;
+}
+
+.presentation{
+    display: flex;
+    align-items: left;
+}
+
+.val{
+    align-items: right;
+}
+
+.valeur{
+    padding: 0 10% 0;
+    border-radius: 13px;
+    width: 100%;
+    border: 1px solid #FFEECC;
+}
+
+.mid {
+    margin: 10% 20% 10%;
 }
