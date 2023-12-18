@@ -1,0 +1,237 @@
+:root {
+    --clr: #FFEECC;
+    --font: MonoSpace;
+}
+
+*{
+    color: white;
+    cursor: url("../ressources/curseur/curseur.png"), auto;
+    font-family: var(--font);
+}
+
+body{
+    background-color: black;
+}
+
+.logo{
+    text-align: center;
+    justify-content: center;
+    background-color: black;
+}
+
+#logo{
+    width: 7%;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+}
+
+.liste .item {
+    display: inline-block;
+    list-style: none;
+    font-size: 1.3rem;
+    padding: 0 15px;
+    margin: 0 10px;
+    position: relative;
+}
+
+.home-link,.home-link:visited{
+    color: var(--clr);
+    text-decoration: none;
+}
+
+/****************/
+/*****NAV BAR****/
+/****************/
+
+.item:after , .item:before{
+    content: '';
+    width: 0;
+    height: 1.5px;
+    background: var(--clr);
+    position: absolute;
+    transition: all 0.3s;
+}
+
+.item:before {
+    left: 0px;
+    top: -5px;
+}
+
+.item:after{
+    right: 0px;
+    bottom: -5px;
+}
+
+.item:hover:after, .item:hover:before {
+    width: 100%;
+}
+
+/************/
+/***ID CARD**/
+/************/
+.table-id{
+    text-align: center;
+    justify-content: center;
+    display: flex;
+}
+/*********Cartes*********/
+
+.card{
+    width: 300px;
+    margin: 5% 30px 5%;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12.8px;
+    border: 1px solid var(--clr);
+}
+
+.card:hover {
+    box-shadow: 0px 0px 10px #fff,
+                 0px 0px 20px #fff,
+                 0px 0px 30px #fff;
+}
+
+.card img{
+    margin-left: 20%;
+    width: 80px;
+    height: 80px;
+    object-fit:cover;
+    border: 1px solid var(--clr) ;
+    border-radius: 500px;
+    background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
+}
+
+.head-id{
+    display: grid;
+    grid-template-columns: 2 1fr;
+    grid-gap: 0px;
+    grid-template-rows: 4 1fr;
+}
+
+.head-id h2 {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.head-id img{
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.head-id p{
+    grid-column: 2;
+    text-align: center;
+}
+
+/******Id******/
+
+.content {
+    text-align: left;
+    flex: 1 1 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding: 8.6px;
+    border-radius: 12.8px;
+    background-color: gray;
+}
+.content h2{
+    font-size: 1.5rem;
+    font-weight: 560;
+    margin-bottom: 1%;
+    color: black;
+}
+.content h2:hover{
+    color: white;
+}
+.content p {
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 3.2px 0;
+    color: black;
+}
+.content p:hover{
+    color: white;
+}
+
+.infos {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 5px
+}
+
+.info {
+    border-radius: 6.4px;
+    padding: 3.2px;
+    font-size: 9.6px;
+    background-color: white;
+    color: black;
+    transition: all 0.3s;
+    font-weight: 560;
+    border: 1px solid var(--clr);
+}
+
+.info:hover {
+    background-color: black;
+    color: white;
+    border: 1px solid var(--clr);
+}
+
+.btn {
+    text-align: center;
+    border-top: 0.8px solid gray;
+    padding-top: 9.6px;
+    gap: 6.4px;
+    display: flex;
+    margin-top: auto;
+    flex-wrap: wrap;
+}
+
+.btn a {
+    background-color: white;
+    color: black;
+    padding: 8px;
+    text-decoration: none;
+    border-radius: 6.4px;
+    outline: none;
+    border: none;
+    font-size: 11.2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+    flex: 1 0 144px;
+    max-width: 100%;
+    border: 1px solid var(--clr);
+}
+
+.btn a:hover {
+    text-decoration: underline;
+    background-color: black;
+    color: white;
+    border: 1px solid var(--clr);
+}
+
+.btn a .learn {
+    background-color: inherit;
+    color: rgb(75, 2, 75);
+    border: 0.8px solid rgb(75, 2, 75);
+    flex: 1 0 48px;
+    border: 1px solid var(--clr);
+}
+
+.quote{
+    padding: 10px;
+    text-align: left;
+    font-style: italic;
+    font-size: 1.5rem;
+}
+
