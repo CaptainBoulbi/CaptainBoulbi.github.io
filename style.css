@@ -65,15 +65,30 @@ body{
 /***********************************/
 
 .prez{
+    padding: 1% 1% 1%;
+    font-size: 1.4rem;
+    border: 1px var(--clr) solid;
+    border-radius: 25px;
     text-align: left;
     width: 30%;
     height: 100%;
     padding-left: 2% ;
+    margin: 7% 20% 0% 10%;
+}
+
+.prez > a:hover{
+    color: var(--clr);
+    text-decoration: underline;
+}
+
+.prez > a{
+    text-decoration: none;
 }
 
 .presentation{
     display: flex;
-    align-items: left;
+    text-align: left;
+    justify-content: center;
 }
 
 .val{
@@ -84,11 +99,13 @@ body{
     padding: 0 10% 0;
     border-radius: 13px;
     width: 100%;
-    border: 1px solid #FFEECC;
+    border: 1px solid var(--clr);
+    margin-top: 3%;
+    margin-left: -40%;
 }
 
 .mid {
-    margin: 10% 20% 10%;
+    margin: 10% 0% 10%;
 }
 
 /****************/
@@ -96,7 +113,7 @@ body{
 /****************/
 
 .body-typescript {
-    margin-top: 5%;
+    margin-top: 2%;
     background-color: #000000;
     display: grid;
     place-items: center;
@@ -147,7 +164,7 @@ body{
     margin-top: 3%;
     width: 50px;
     aspect-ratio: 6;
-    --_g: no-repeat radial-gradient(circle closest-side,#FFEECC 90%,#000);
+    --_g: no-repeat radial-gradient(circle closest-side,var(--clr) 90%,#000);
     background: 
     var(--_g) 0%   50%,
     var(--_g) 50%  50%,
@@ -234,7 +251,7 @@ body{
     justify-content: center;
     align-items: center;
     border-radius: 12.8px;
-    border: 1px solid #FFEECC;
+    border: 1px solid var(--clr);
 }
 
 .card:hover {
@@ -248,7 +265,7 @@ body{
     width: 80px;
     height: 80px;
     object-fit:cover;
-    border: 1px solid #FFEECC ;
+    border: 1px solid var(--clr) ;
     border-radius: 500px;
     background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
 }
@@ -322,13 +339,13 @@ body{
     color: black;
     transition: all 0.3s;
     font-weight: 560;
-    border: 1px solid #FFEECC;
+    border: 1px solid var(--clr);
 }
 
 .info:hover {
     background-color: black;
     color: white;
-    border: 1px solid #FFEECC;
+    border: 1px solid var(--clr);
 }
 
 .btn {
@@ -356,14 +373,14 @@ body{
     white-space: nowrap;
     flex: 1 0 144px;
     max-width: 100%;
-    border: 1px solid #FFEECC;
+    border: 1px solid var(--clr);
 }
 
 .btn a:hover {
     text-decoration: underline;
     background-color: black;
     color: white;
-    border: 1px solid #FFEECC;
+    border: 1px solid var(--clr);
 }
 
 .btn a .learn {
@@ -371,7 +388,7 @@ body{
     color: rgb(75, 2, 75);
     border: 0.8px solid rgb(75, 2, 75);
     flex: 1 0 48px;
-    border: 1px solid #FFEECC;
+    border: 1px solid var(--clr);
 }
 
 .quote{
