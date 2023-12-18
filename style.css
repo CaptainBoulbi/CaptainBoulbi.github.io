@@ -31,6 +31,7 @@ body{
 }
 
 .liste .item {
+    margin: 2%;
     display: inline-block;
     list-style: none;
     font-size: 1.3rem;
