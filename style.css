@@ -101,11 +101,11 @@ body{
     width: 100%;
     border: 1px solid var(--clr);
     margin-top: 3%;
-    margin-left: -40%;
+    margin-left: -70%;
 }
 
 .mid {
-    margin: 10% 0% 10%;
+    margin: 10% -40% 10%;
 }
 
 /****************/
