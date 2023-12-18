@@ -220,14 +220,6 @@ body{
     border: 1px solid var(--clr);
 }
 
-.btn a .learn {
-    background-color: inherit;
-    color: rgb(75, 2, 75);
-    border: 0.8px solid rgb(75, 2, 75);
-    flex: 1 0 48px;
-    border: 1px solid var(--clr);
-}
-
 .quote{
     padding: 10px;
     text-align: left;
