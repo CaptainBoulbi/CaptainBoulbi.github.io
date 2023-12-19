@@ -206,3 +206,113 @@ body{
 .item:hover:after, .item:hover:before {
     width: 100%;
 }
+
+.burger, #burger-check{
+    display: none;
+}
+
+/****************/
+/***RESPONSIVE***/
+/****************/
+
+@media screen and (max-width: 750px){
+    
+    .navbar{
+        text-align: left;
+        justify-content: left;
+    }
+
+    .liste{
+        margin-left: -30px ;
+        display: none;
+        transition: 0.4s;
+    }
+
+    .line{
+        display: block;
+        height: 4px;
+        width: 100%;
+        border-radius: 10px;
+        background: white;
+    }
+
+    .line1{
+        transform-origin: 0% 0%;
+        transition: transform 0.4s ease-in-out;
+    }
+
+    .line2{
+        transition: transform 0.2s ease-in-out;
+    }
+
+    .line3{
+        transform-origin: 0% 100%;
+        transition: transform 0.4s ease-in-out;
+    }
+
+    .burger{
+        display: flex;
+        margin-left: 30px;
+        margin-top: 20px;
+        background-color: black;
+        display: block;
+        height: 26px;
+        width: 30px;
+        position: absolute;
+        top: 17px;
+        left: 20px;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    #burger-check{
+        display: none;
+        height: 25px;
+        width: 29px;
+        margin-right: 40px;
+    }
+
+    #burger-check:checked + label + .navbar{
+        margin-top: 15px;
+        border: 1px var(--clr) solid;
+        border-radius: 12.8px;
+        margin-bottom: 20px;
+    }
+
+    #burger-check:checked + label > .line1{
+        transform: rotate(48deg);
+    }
+    #burger-check:checked + label > .line2{
+        transform: scaleY(0);
+    }
+
+    #burger-check:checked + label > .line3{
+        transform: rotate(-48deg);
+    }
+
+    #burger-check:checked + label + .navbar *{
+        animation: slide-left 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        display: block;
+    }
+
+    #burger-check:checked + label + .navbar > .liste > .item{
+        margin-top: 12px;
+        margin-bottom: 12px;
+        font-size: 1.6rem;
+    }
+
+    .item:hover:after, .item:hover:before{
+        width: 0;
+    }
+
+    @keyframes slide-left {
+      0% {
+            transform: translateX(755px);
+        }
+      100% {
+            transform: translateX(0px);
+            }
+        }
+}
