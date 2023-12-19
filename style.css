@@ -67,7 +67,7 @@ body{
 
 .prez{
     padding: 1% 1% 1%;
-    font-size: 1.4rem;
+    font-size:1.2rem;
     border: 1px var(--clr) solid;
     border-radius: 25px;
     text-align: left;
@@ -97,6 +97,7 @@ body{
 }
 
 .valeur{
+    font-size: 1rem;
     padding: 0 10% 0;
     border-radius: 13px;
     width: 100%;
@@ -215,7 +216,7 @@ body{
 /***RESPONSIVE***/
 /****************/
 
-@media screen and (max-width: 750px){
+@media screen and (max-width: 1024px){
     
     .navbar{
         text-align: left;
@@ -314,5 +315,13 @@ body{
       100% {
             transform: translateX(0px);
             }
+        }
+
+        .prez{
+            width: 100%;
+        }
+
+        .val{
+            width: 30%;
         }
 }
