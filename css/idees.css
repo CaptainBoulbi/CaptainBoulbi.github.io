@@ -233,7 +233,7 @@ body{
     .desc{
         display: flex;
         width: 100%;
-        font-size: clamp(25px, 1.5em, 100px);
+        font-size: clamp(25px, 1.3em, 80px);
     }
 
     #logo{
@@ -241,7 +241,7 @@ body{
     }
 
     .title{
-        font-size: clamp(30px, 1.8em, 120px);
+        font-size: clamp(30px, 1.5em, 100px);
     }
 
     .idees{
