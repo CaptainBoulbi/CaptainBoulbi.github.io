@@ -303,6 +303,10 @@ body{
         margin-bottom: 12px;
         font-size: 1.6rem;
     }
+    
+    #logo{
+        width: max(80px, 10%);
+    }
 
     .item:hover:after, .item:hover:before{
         width: 0;
@@ -324,4 +328,28 @@ body{
         .val{
             width: 30%;
         }
+
+    .presentation{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .prez{
+        width: 80%;
+    }
+
+    .val{
+        display: flex;
+        flex-direction: column;
+        margin-left: 30%;
+    }
+
+    .valeur{
+        margin: 30px 0 0;
+    }
+
+    .mid{
+        margin: 30px 0 0;
+    }
+
 }

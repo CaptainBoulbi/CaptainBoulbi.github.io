@@ -75,17 +75,19 @@ body{
 /************/
 /***ID CARD**/
 /************/
+
 .table-id{
     text-align: center;
     justify-content: center;
     display: flex;
 }
+
 /*********Cartes*********/
 
 .card{
     width: 300px;
     margin: 5% 30px 5%;
-    display: block;
+    display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 12.8px;
@@ -323,7 +325,11 @@ body{
         margin-bottom: 12px;
         font-size: 1.6rem;
     }
-
+    
+    #logo{
+        width: max(80px, 10%);
+    }
+    
     .item:hover:after, .item:hover:before{
         width: 0;
     }
@@ -336,4 +342,12 @@ body{
             transform: translateX(0px);
             }
         }
+
+    .table-id{
+        flex-direction: column;
+    }
+
+    .card{
+        width: min(300px, 150%);
+    }
 }
