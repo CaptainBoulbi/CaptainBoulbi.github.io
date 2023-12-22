@@ -100,7 +100,7 @@ body{
                  0px 0px 30px #fff;
 }
 
-.card img{
+.id{
     margin-left: 20%;
     width: 80px;
     height: 80px;
@@ -228,6 +228,55 @@ body{
     text-align: left;
     font-style: italic;
     font-size: 1.5rem;
+}
+
+/*******************/
+/******3D CARD******/
+/*******************/
+
+.card-body {
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    perspective: 2500px;
+}
+
+.cover-image {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.character {
+    width: 250px;
+    opacity: 0;
+    transition: all 0.5s;
+    z-index: -1;
+}
+
+.wrapper {
+    transition: all 0.5s;
+    width: 200px;
+    z-index: -1;
+}
+
+.card-body:hover .wrapper {
+    box-shadow: 2px 35px 32px -8px rgba(255, 255, 255, 0.5);
+    transform: perspective(900px) translateY(-10%) rotateX(25deg) translateZ(0);
+}
+
+.character {
+    width: 250px;
+    opacity: 0;
+    transition: all 0.5s;
+    position: absolute;
+    z-index: -1;
+}
+
+.card-body:hover .character {
+  opacity: 1;
+  transform: translate3d(0%, -20%, 50px);
 }
 
 /****************/
