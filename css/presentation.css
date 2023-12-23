@@ -24,6 +24,7 @@ body{
 }
 
 .navbar{
+    margin-bottom: 3%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -256,6 +257,7 @@ body{
 }
 
 .wrapper {
+    margin-top: 5%;
     transition: all 0.5s;
     width: 200px;
     z-index: -1;
@@ -263,10 +265,11 @@ body{
 
 .card-body:hover .wrapper {
     box-shadow: 2px 35px 32px -8px rgba(255, 255, 255, 0.5);
-    transform: perspective(900px) translateY(-10%) rotateX(25deg) translateZ(0);
+    transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
 }
 
 .character {
+    margin-top: 4%;
     width: 250px;
     opacity: 0;
     transition: all 0.5s;
@@ -276,7 +279,8 @@ body{
 
 .card-body:hover .character {
   opacity: 1;
-  transform: translate3d(0%, -20%, 50px);
+  z-index: 2;
+  transform: translate3d(0%, 50%, 50px);
 }
 
 /****************/
