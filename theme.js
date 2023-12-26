@@ -209,10 +209,7 @@ function change_theme() {
 	//const date = new Date('2023, 12, 26'); //pour tester directement
 	const month = date.getMonth();
 	const elements = document.querySelectorAll(".logo");
-	const logo = document.getElementById('logo');
-    const mrmoi = document.getElementById('char_mrmoi');
-    const nemo = document.getElementById('char_nemo');
-    const canard = document.getElementById('char_canard');
+	const logo = document.getElementById('logo')
 
 	if (month === 9) {
 		elements.forEach(element => {
@@ -222,10 +219,7 @@ function change_theme() {
 	} else if (month === 11) {
 		elements.forEach(element => {
 			snow.play();
-			logo.src = "../ressources/logo_noel.png";
-            mrmoi.src = "../ressources/id/mrmoi_char_noel.webp";
-            nemo.src = "../ressources/id/nemo_char_noel.webp";
-            canard.src = "../ressources/id/simon_duk_char_noel.webp";
+			logo.src = "./ressources/logo_noel.png";
 			element.classList.add("noel");
 			element.classList.remove("halloween");
 		});
