@@ -11,6 +11,7 @@
 
 body{
     background-color: black;
+    overflow: hidden;
 }
 
 .logo{
@@ -358,15 +359,34 @@ body{
 /***JS***/
 /********/
 
-.noel{
-    /*background-color: red;*/
-    background-image: url(./ressources/bonnet.jpg);
-    z-index: 2;
+.blood {
+  position: absolute;
+  top: -50px; 
+  left: 50%;
+  width: 3px;
+  height: 100vh;
+  background-color: darkred;
+  opacity: 0.8; /* Opacité */
+  transform: translateX(-50%) scaleY(0);
+  transform-origin: top; 
 }
 
-.halloween{
-    background-color: blue;
+@keyframes bloodFlow {
+  0% {
+    transform: translateY(-100vh) translateX(-50%) scaleY(0);
+    opacity: 0.6;
 }
+  70% {
+    transform: translateY(0) translateX(-50%) scaleY(1.2);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(100vh) translateX(-50%) scaleY(0);
+    opacity: 0;
+  }
+}
+
+
 
 .snowflake {
     position: absolute;

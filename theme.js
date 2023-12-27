@@ -202,28 +202,58 @@
 
 })(window, document);
 
-var snow = new Snowfall();
+/******************************************************************************************************/
+/******************************************************************************************************/
+/***********************************************BLOOD RAIN*********************************************/
+/******************************************************************************************************/
+/******************************************************************************************************/
+
+function createBlood() {
+  const numDrops = 40;
+  const body = document.body;
+
+  for (let i = 0; i < numDrops; i++) {
+    const bloodDrop = document.createElement('div');
+    bloodDrop.classList.add('blood');
+    bloodDrop.style.left = `${Math.random() * window.innerWidth}px`; // Position horizontale aléatoire
+    bloodDrop.style.animation = `bloodFlow ${Math.random() * 2 + 20}s forwards ${Math.random() * 2}s`; // Durée et délai aléatoires
+    body.appendChild(bloodDrop);
+
+     // Supprimer la goutte une fois l'animation terminée
+    bloodDrop.addEventListener('animationend', () => {
+      bloodDrop.remove();
+    });
+  }
+}
+
+/******************************************************************************************************/
+/***********************************************MAIN FUNCTION******************************************/
+/******************************************************************************************************/
 
 function change_theme() {
-	const date = new Date();
-	//const date = new Date('2023, 12, 26'); //pour tester directement
+	//const date = new Date();
+	const date = new Date('2023, 10, 26'); //pour tester directement
 	const month = date.getMonth();
 	const elements = document.querySelectorAll(".logo");
 	const logo = document.getElementById('logo')
 
 	if (month === 9) {
 		elements.forEach(element => {
-			element.classList.add("halloween");
+            createBlood();
+			//element.classList.add("halloween");
 			element.classList.remove("noel");
 		});
 	} else if (month === 11) {
 		elements.forEach(element => {
+            var snow = new Snowfall();
 			snow.play();
-			logo.src = "./ressources/logo_noel.png";
-			element.classList.add("noel");
-			element.classList.remove("halloween");
+			logo.src = "./ressources/themes/logo_noel.png";
+			//element.classList.add("noel");
+			//element.classList.remove("halloween");
 		});
 	}
 }
 
 change_theme();
+
+

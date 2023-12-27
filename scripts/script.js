@@ -202,11 +202,117 @@
 
 })(window, document);
 
-var snow = new Snowfall();
+var c = document.getElementById("canvas-club");
+var ctx = c.getContext("2d");
+var w = c.width = window.innerWidth;
+var h = c.height = window.innerHeight;
+var clearColor = 'rgba(0, 0, 0, .1)';
+var max = 30;
+var drops = [];
+
+function random(min, max) {
+    return Math.random() * (max - min) + min;
+}
+
+function O() {}
+
+O.prototype = {
+    init: function() {
+        this.x = random(0, w);
+        this.y = 0;
+        this.color = 'hsl(000, 100%, 50%)';
+        this.w = 2;
+        this.h = 1;
+        this.vy = random(4, 5);
+        this.vw = 3;
+        this.vh = 1;
+        this.size = 2;
+        this.hit = random(h * .8, h * .9);
+        this.a = 1;
+        this.va = .96;
+    },
+    draw: function() {
+        if (this.y > this.hit) {
+            ctx.beginPath();
+            ctx.moveTo(this.x, this.y - this.h / 2);
+            ctx.moveTo(this.x, this.y - this.h / 2);
+
+            ctx.bezierCurveTo(
+                this.x + this.w / 2, this.y - this.h / 2,
+                this.x + this.w / 2, this.y + this.h / 2,
+                this.x, this.y + this.h / 2);
+
+            ctx.bezierCurveTo(
+                this.x - this.w / 2, this.y + this.h / 2,
+                this.x - this.w / 2, this.y - this.h / 2,
+                this.x, this.y - this.h / 2);
+
+            ctx.strokeStyle = 'hsla(000, 100%, 50%, '+this.a+')';
+            ctx.stroke();
+            ctx.closePath();
+            
+        } else {
+            ctx.fillStyle = this.color;
+            ctx.fillRect(this.x, this.y, this.size, this.size * 5);
+        }
+        this.update();
+    },
+    update: function() {
+        if(this.y < this.hit){
+            this.y += this.vy;
+        } else {
+            if(this.a > .03){
+                this.w += this.vw;
+                this.h += this.vh;
+                if(this.w > 100){
+                    this.a *= this.va;
+                    this.vw *= .98;
+                    this.vh *= .98;
+                }
+            } else {
+                this.init();
+            }
+        }
+        
+    }
+}
+
+
+
+function resize(){
+    w = c.width = window.innerWidth;
+    h = c.height = window.innerHeight;
+
+}
+
+function setup(){
+    for(var i = 0; i < max; i++){
+        (function(j){
+            setTimeout(function(){
+                var o = new O();
+                o.init();
+                drops.push(o);
+            }, j * 200)
+        }(i));
+    }
+}
+
+
+function anim() {
+    ctx.fillStyle = clearColor;
+    ctx.fillRect(0,0,w,h);
+    for(var i in drops){
+        drops[i].draw();
+    }
+    requestAnimationFrame(anim);
+}
+
+
+window.addEventListener("resize", resize);
 
 function change_theme() {
-	const date = new Date();
-	//const date = new Date('2023, 12, 26'); //pour tester directement
+	//const date = new Date();
+	const date = new Date('2023, 10, 26'); //pour tester directement
 	const month = date.getMonth();
 	const elements = document.querySelectorAll(".logo");
 	const logo = document.getElementById('logo');
@@ -216,16 +322,19 @@ function change_theme() {
 
 	if (month === 9) {
 		elements.forEach(element => {
+            setup();
+            anim();
 			element.classList.add("halloween");
 			element.classList.remove("noel");
 		});
 	} else if (month === 11) {
 		elements.forEach(element => {
+            var snow = new Snowfall();
 			snow.play();
-			logo.src = "../ressources/logo_noel.png";
-            mrmoi.src = "../ressources/id/mrmoi_char_noel.webp";
-            nemo.src = "../ressources/id/nemo_char_noel.webp";
-            canard.src = "../ressources/id/simon_duk_char_noel.webp";
+			logo.src = "../ressources/themes/logo_noel.png";
+            mrmoi.src = "../ressources/themes/mrmoi_char_noel.webp";
+            nemo.src = "../ressources/themes/nemo_char_noel.webp";
+            canard.src = "../ressources/themes/simon_duk_char_noel.webp";
 			element.classList.add("noel");
 			element.classList.remove("halloween");
 		});
