@@ -231,8 +231,8 @@ function createBlood() {
 /******************************************************************************************************/
 
 function change_theme() {
-	//const date = new Date();
-	const date = new Date('2023, 10, 26'); //pour tester directement
+	const date = new Date();
+	//const date = new Date('2023, 10, 26'); //pour tester directement
 	const month = date.getMonth();
 	const elements = document.querySelectorAll(".logo");
 	const logo = document.getElementById('logo')

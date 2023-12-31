@@ -202,117 +202,37 @@
 
 })(window, document);
 
-var c = document.getElementById("canvas-club");
-var ctx = c.getContext("2d");
-var w = c.width = window.innerWidth;
-var h = c.height = window.innerHeight;
-var clearColor = 'rgba(0, 0, 0, .1)';
-var max = 30;
-var drops = [];
+/******************************************************************************************************/
+/******************************************************************************************************/
+/***********************************************BLOOD RAIN*********************************************/
+/******************************************************************************************************/
+/******************************************************************************************************/
 
-function random(min, max) {
-    return Math.random() * (max - min) + min;
+function createBlood() {
+  const numDrops = 40;
+  const body = document.body;
+
+  for (let i = 0; i < numDrops; i++) {
+    const bloodDrop = document.createElement('div');
+    bloodDrop.classList.add('blood');
+    bloodDrop.style.left = `${Math.random() * window.innerWidth}px`; // Position horizontale aléatoire
+    bloodDrop.style.animation = `bloodFlow ${Math.random() * 2 + 20}s forwards ${Math.random() * 2}s`; // Durée et délai aléatoires
+    body.appendChild(bloodDrop);
+
+     // Supprimer la goutte une fois l'animation terminée
+    bloodDrop.addEventListener('animationend', () => {
+      bloodDrop.remove();
+    });
+  }
 }
 
-function O() {}
-
-O.prototype = {
-    init: function() {
-        this.x = random(0, w);
-        this.y = 0;
-        this.color = 'hsl(000, 100%, 50%)';
-        this.w = 2;
-        this.h = 1;
-        this.vy = random(4, 5);
-        this.vw = 3;
-        this.vh = 1;
-        this.size = 2;
-        this.hit = random(h * .8, h * .9);
-        this.a = 1;
-        this.va = .96;
-    },
-    draw: function() {
-        if (this.y > this.hit) {
-            ctx.beginPath();
-            ctx.moveTo(this.x, this.y - this.h / 2);
-            ctx.moveTo(this.x, this.y - this.h / 2);
-
-            ctx.bezierCurveTo(
-                this.x + this.w / 2, this.y - this.h / 2,
-                this.x + this.w / 2, this.y + this.h / 2,
-                this.x, this.y + this.h / 2);
-
-            ctx.bezierCurveTo(
-                this.x - this.w / 2, this.y + this.h / 2,
-                this.x - this.w / 2, this.y - this.h / 2,
-                this.x, this.y - this.h / 2);
-
-            ctx.strokeStyle = 'hsla(000, 100%, 50%, '+this.a+')';
-            ctx.stroke();
-            ctx.closePath();
-            
-        } else {
-            ctx.fillStyle = this.color;
-            ctx.fillRect(this.x, this.y, this.size, this.size * 5);
-        }
-        this.update();
-    },
-    update: function() {
-        if(this.y < this.hit){
-            this.y += this.vy;
-        } else {
-            if(this.a > .03){
-                this.w += this.vw;
-                this.h += this.vh;
-                if(this.w > 100){
-                    this.a *= this.va;
-                    this.vw *= .98;
-                    this.vh *= .98;
-                }
-            } else {
-                this.init();
-            }
-        }
-        
-    }
-}
-
-
-
-function resize(){
-    w = c.width = window.innerWidth;
-    h = c.height = window.innerHeight;
-
-}
-
-function setup(){
-    for(var i = 0; i < max; i++){
-        (function(j){
-            setTimeout(function(){
-                var o = new O();
-                o.init();
-                drops.push(o);
-            }, j * 200)
-        }(i));
-    }
-}
-
-
-function anim() {
-    ctx.fillStyle = clearColor;
-    ctx.fillRect(0,0,w,h);
-    for(var i in drops){
-        drops[i].draw();
-    }
-    requestAnimationFrame(anim);
-}
-
-
-window.addEventListener("resize", resize);
+/******************************************************************************************************/
+/***********************************************MAIN FUNCTION******************************************/
+/******************************************************************************************************/
 
 function change_theme() {
-	//const date = new Date();
-	const date = new Date('2023, 10, 26'); //pour tester directement
+	const date = new Date();
+	//const date = new Date('2023, 10, 26'); //pour tester directement
 	const month = date.getMonth();
 	const elements = document.querySelectorAll(".logo");
 	const logo = document.getElementById('logo');
@@ -322,8 +242,7 @@ function change_theme() {
 
 	if (month === 9) {
 		elements.forEach(element => {
-            setup();
-            anim();
+            
 			element.classList.add("halloween");
 			element.classList.remove("noel");
 		});
