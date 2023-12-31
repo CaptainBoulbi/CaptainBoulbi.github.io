@@ -242,9 +242,9 @@ function change_theme() {
 
 	if (month === 9) {
 		elements.forEach(element => {
-            
-			element.classList.add("halloween");
-			element.classList.remove("noel");
+            createBlood();
+			//element.classList.add("halloween");
+			//element.classList.remove("noel");
 		});
 	} else if (month === 11) {
 		elements.forEach(element => {
@@ -254,8 +254,8 @@ function change_theme() {
             mrmoi.src = "../ressources/themes/mrmoi_char_noel.webp";
             nemo.src = "../ressources/themes/nemo_char_noel.webp";
             canard.src = "../ressources/themes/simon_duk_char_noel.webp";
-			element.classList.add("noel");
-			element.classList.remove("halloween");
+			//element.classList.add("noel");
+			//element.classList.remove("halloween");
 		});
 	}
 }

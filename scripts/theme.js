@@ -241,7 +241,7 @@ function change_theme() {
 		elements.forEach(element => {
             createBlood();
 			//element.classList.add("halloween");
-			element.classList.remove("noel");
+			//element.classList.remove("noel");
 		});
 	} else if (month === 11) {
 		elements.forEach(element => {
