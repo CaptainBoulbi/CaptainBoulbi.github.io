@@ -1,3 +1,19 @@
+html {
+    background-color: black;
+    color: #cecece;
+    font-size: 1.1rem;
+}
+
+a {
+    text-decoration: none;
+    color: #ffddaa;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: inherit;
+}
+
 #logo {
     text-align: center;
 }
@@ -6,6 +22,7 @@ menu {
     text-align: center;
     display: flex;
     font-size: 1.2rem;
+    font-weight: bold;
 }
 
 menu > ul {
@@ -86,12 +103,13 @@ menu > ul > li {
 #recent-article-list li {
     margin: 5px;
     padding: 5px;
-    border: solid 1px black;
+    border: solid 1px #cecece;
 }
 
 main {
-    padding-left: 15%;
-    padding-right: 15%;
+    padding:  50px;
+    margin-left: 15%;
+    margin-right: 15%;
 }
 
 #categories ul {
@@ -104,14 +122,15 @@ main {
 #categories li {
     margin: 5px;
     padding: 5px;
-    border: solid 1px black;
+    border: solid 1px #cecece;
     border-radius: 7%;
 }
 
 a.game-unit {
+    font-weight: bold;
     display: flex;
     margin-bottom: 20px;
-    border: solid 1px black;
+    border: solid 1px #cecece;
     border-radius: 7px;
     padding: 5px;
 }
@@ -132,11 +151,12 @@ a.game-unit li {
     margin-left: 5px;
     margin-right: 5px;
     padding: 5px;
-    border: solid 1px black;
+    border: solid 1px #cecece;
     border-radius: 7%;
 }
 
 a.game-unit .game-title {
+    margin-top: 0px;
     font-size: 1.2rem;
 }
 
@@ -156,7 +176,7 @@ a.game-unit {
 a.article-unit {
     text-decoration: none;
     color: inherit;
-    border: solid 1px black;
+    border: solid 1px #cecece;
     border-radius: 7%;
 }
 

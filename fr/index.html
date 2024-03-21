@@ -10,7 +10,7 @@
         <a id="change-lang" href="/en/">change language to english</a>
 
         <div id="logo">
-            <img src="/img/logo.png"></img>
+            <a href="."><img src="/img/logo.png"></img></a>
         </div>
         <menu>
             <ul>
@@ -55,7 +55,7 @@
             const buttons = document.querySelectorAll(".btn");
             const slides = document.querySelectorAll(".slide");
 
-            setInterval(() => {nextSlide(1);}, 5000);
+            setInterval(() => {nextSlide(1);}, 7000);
 
             buttons.forEach((button) => {
                 button.addEventListener("click", (e) => {
