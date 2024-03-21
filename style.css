@@ -21,9 +21,57 @@ menu > ul > li {
     margin-right: 25px;
 }
 
-#carrousel {
-    border: solid 1px red;
+#carousel {
     height: 75vh;
+    position: relative;
+}
+
+#carousel button {
+  position: absolute;
+  background: none;
+  border: none;
+  outline: none;
+  font-size: 2.6rem;
+  z-index: 2;
+  cursor: pointer;
+  color: rgb(243, 241, 241);
+  transform: translateY(-50%);
+  top: 50%;
+}
+
+#prev {
+  left: 5px;
+}
+
+#next {
+  right: 5px;
+}
+
+#carousel ul {
+    padding: 0px;
+}
+
+#carousel li {
+  list-style: none;
+}
+
+.slide {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.4s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.slide img {
+  display: block;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 #game-list-link {

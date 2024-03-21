@@ -23,11 +23,65 @@
             </ul>
         </menu>
 
-        <a href="game/game1.html">
-            <div id="carrousel">
-                <p>carrousel</p>
-            </div>
-        </a>
+        <a href="."></a>
+        <div id="carousel">
+            <button type="button" class="btn" id="prev">&#10096;</button>
+            <button type="button" class="btn" id="next">&#10097;</button>
+            <!--
+                pour ajouter une image au carousel :
+
+                - changer le lien du 1er lien a
+                - copier le 1er li et le mettre au dessus
+                - enlever la class active a l'ancien li
+                - modifier src pour avoir la bonne img
+                - modifier id en mettant le lien du de la page du jeu
+            -->
+            <a id="carousel-link" href="game/game1.html">
+                <ul>
+                    <li class="slide active">
+                        <img class="img-link" src="/img/carousel/apple-linous.webp" id="game/game1.html">
+                    </li>
+                    <li class="slide">
+                        <img class="img-link" src="/img/carousel/bee-kiss-fish.png" id="game/game2.html">
+                    </li>
+                    <li class="slide">
+                        <img class="img-link" src="/img/carousel/game1.png" id="game/game3.html">
+                    </li>
+                </ul>
+            </a>
+        </div>
+
+        <script>
+            const buttons = document.querySelectorAll(".btn");
+            const slides = document.querySelectorAll(".slide");
+
+            setInterval(() => {nextSlide(1);}, 5000);
+
+            buttons.forEach((button) => {
+                button.addEventListener("click", (e) => {
+                    const calcNextSlide = e.target.id === "next" ? 1 : -1;
+                    nextSlide(calcNextSlide);
+                });
+            });
+
+            function nextSlide(dir) {
+                const slideActive = document.querySelector(".active");
+
+                newIndex = dir + [...slides].indexOf(slideActive);
+
+                if (newIndex < 0) newIndex = [...slides].length - 1;
+                if (newIndex >= [...slides].length) newIndex = 0;
+                slides[newIndex].classList.add("active");
+
+                slideActive.classList.remove("active");
+
+                newSlide = slides[newIndex];
+
+                document.getElementById("carousel-link").href = 
+                    newSlide.getElementsByClassName("img-link")[0].id;
+            }
+        </script>
+
         <div id="game-list-link">
             <a href="game">Liste de tout les jeux</a>
         </div>
