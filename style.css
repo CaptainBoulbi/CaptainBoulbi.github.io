@@ -132,7 +132,16 @@ main {
     border-radius: 7%;
 }
 
-a.game-unit {
+#categories li:hover {
+    cursor: pointer;
+}
+
+#categories li#selected {
+    color: #ffddaa;
+    border: solid 1px #ffddaa;
+}
+
+.game-unit {
     color: #ffddaa;
     font-weight: bold;
     display: flex;
@@ -142,19 +151,19 @@ a.game-unit {
     padding: 5px;
 }
 
-a.game-unit img {
+.game-unit img {
     height: 22vh;
     margin-right: 10px;
 }
 
-a.game-unit ul {
+.game-unit ul {
     display: flex;
     padding: 0px;
     list-style: none;
     flex-wrap: wrap;
 }
 
-a.game-unit li {
+.game-unit li {
     margin-left: 5px;
     margin-right: 5px;
     padding: 5px;
@@ -162,12 +171,12 @@ a.game-unit li {
     border-radius: 7%;
 }
 
-a.game-unit .game-title {
+.game-unit .game-title {
     margin-top: 0px;
     font-size: 1.2rem;
 }
 
-a.game-unit .game-cat {
+.game-unit .game-cat {
     text-decoration: underline;
 }
 
@@ -175,12 +184,12 @@ a.game-unit .game-cat {
     text-align: center;
 }
 
-a.game-unit {
+.game-unit {
     text-decoration: none;
     color: #ffddaa;
 }
 
-a.game-unit:hover {
+.game-unit:hover {
     color: #cecece;
 }
 
@@ -193,4 +202,8 @@ a.article-unit {
 
 #change-lang {
     position: absolute;
+}
+
+.hide, .hide * {
+    display: none;
 }

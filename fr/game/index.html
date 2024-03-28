@@ -51,10 +51,38 @@
                     <p class="game-cat">Categories :</p>
                     <ul>
                         <li class="aventure">Aventure</li>
-                        <li class="puzzle">Puzzle</li>
                     </ul>
                 </div>
             </a>
         </main>
+        <script>
+            function tagFilter(tag)
+            {
+                tag = tag.toLowerCase();
+                var classs = document.getElementsByClassName("game-unit")
+
+                for (var i=0; i<classs.length; i++) {
+                    var tmp = classs[i].getElementsByClassName(tag);
+                    console.log(tmp);
+                    console.log(tmp.length);
+                    if (tmp.length > 0) {
+                        classs[i].classList.remove("hide");
+                    } else {
+                        classs[i].classList.add("hide");
+                    }
+                }
+            }
+
+            var list = document.getElementById("categories").getElementsByTagName("li")
+            for (var i=0; i<list.length; i++) {
+                list[i].addEventListener("click", (e) => {
+                    for (var i=0; i<list.length; i++) {
+                        list[i].removeAttribute("id", "selected");
+                    }
+                    e.target.setAttribute("id", "selected");
+                    tagFilter(e.target.innerHTML);
+                })
+            }
+        </script>
     </body>
 </html>
