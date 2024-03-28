@@ -92,7 +92,12 @@ menu > ul > li {
 }
 
 #game-list-link {
+    margin: 1% 35% 1%;
     text-align: center;
+    border: solid 2px #cecece;
+    border-radius: 10px;
+    padding-top: 6px;
+    padding-bottom: 6px;
 }
 
 #recent-article-list {
@@ -101,9 +106,10 @@ menu > ul > li {
 }
 
 #recent-article-list li {
-    margin: 5px;
-    padding: 5px;
-    border: solid 1px #cecece;
+    margin: 15px 5px;
+    padding: 7px;
+    border: solid 2px #cecece;
+    border-radius: 7px;
 }
 
 main {
@@ -127,11 +133,12 @@ main {
 }
 
 a.game-unit {
+    color: #ffddaa;
     font-weight: bold;
     display: flex;
     margin-bottom: 20px;
-    border: solid 1px #cecece;
-    border-radius: 7px;
+    border: solid 2px #cecece;
+    border-radius: 9px;
     padding: 5px;
 }
 
@@ -170,7 +177,11 @@ a.game-unit .game-cat {
 
 a.game-unit {
     text-decoration: none;
-    color: inherit;
+    color: #ffddaa;
+}
+
+a.game-unit:hover {
+    color: #cecece;
 }
 
 a.article-unit {

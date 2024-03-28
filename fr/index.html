@@ -7,19 +7,20 @@
         <title>Boulbi Corp</title>
     </head>
     <body>
-        <a id="change-lang" href="/en/">change language to english</a>
+        <!-- 🇫🇷 -->
+        <a id="change-lang" href="/en/">🇬🇧</a>
 
         <div id="logo">
             <a href="."><img src="/img/logo.png"></img></a>
         </div>
         <menu>
             <ul>
-                <li><a href="game">jeux</a></li>
-                <li><a href="article">article</a></li>
-                <li><a href="#entreprise">entreprise</li>
-                <li><a href="#equipe">equipe</li>
-                <li><a href="#recrutement">recrutement</li>
-                <li><a href="#contact">contact</li>
+                <li><a href="game">Jeux</a></li>
+                <li><a href="article">Article</a></li>
+                <li><a href="#entreprise">Entreprise</li>
+                <li><a href="#equipe">Equipe</li>
+                <li><a href="#recrutement">Recrutement</li>
+                <li><a href="#contact">Contact</li>
             </ul>
         </menu>
 
@@ -34,7 +35,7 @@
                 - copier le 1er li et le mettre au dessus
                 - enlever la class active a l'ancien li
                 - modifier src pour avoir la bonne img
-                - modifier id en mettant le lien du de la page du jeu
+                - modifier id en mettant le lien de la page du jeu
             -->
             <a id="carousel-link" href="game/game1.html">
                 <ul>
@@ -82,9 +83,11 @@
             }
         </script>
 
-        <div id="game-list-link">
-            <a href="game">Liste de tout les jeux</a>
-        </div>
+        <a href="game">
+            <div id="game-list-link">
+                <span>Liste de tout les jeux</span>
+            </div>
+        </a>
 
         <main>
             <h1>Boulbi Corp</h1>
@@ -104,7 +107,7 @@
             <p>lien contact (mail, jsp...)</p>
 
             <hr>
-            <p>Article recent qui peuvent vous interessez :</p>
+            <p>Articles recents qui peuvent vous interesser :</p>
             <ul id="recent-article-list">
                 <a href="article/article1.html"><li>article1</li></a>
                 <a href="article/article2.html"><li>article2</li></a>
