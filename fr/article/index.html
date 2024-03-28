@@ -30,10 +30,40 @@
             <hr>
 
             <ul id="recent-article-list">
-                <a href="article1.html"><li class="blog">blog : article1</li></a>
-                <a href="article2.html"><li class="devlog">devlog : article2</li></a>
-                <a href="article3.html"><li class="annonce">annonce : article3</li></a>
+                <a class="article" href="article1.html"><li class="blog">blog : article1</li></a>
+                <a class="article" href="article2.html"><li class="devlog">devlog : article2</li></a>
+                <a class="article" href="article3.html"><li class="annonce">annonce : article3</li></a>
+                <a class="article" href="article4.html"><li class="devlog">devlog : article4</li></a>
             </ul>
         </main>
+        <script>
+            function tagFilter(tag)
+            {
+                tag = tag.toLowerCase();
+                var classs = document.getElementsByClassName("article")
+
+                for (var i=0; i<classs.length; i++) {
+                    var tmp = classs[i].getElementsByClassName(tag);
+                    console.log(tmp);
+                    console.log(tmp.length);
+                    if (tmp.length > 0) {
+                        classs[i].classList.remove("hide");
+                    } else {
+                        classs[i].classList.add("hide");
+                    }
+                }
+            }
+
+            var list = document.getElementById("categories").getElementsByTagName("li")
+            for (var i=0; i<list.length; i++) {
+                list[i].addEventListener("click", (e) => {
+                    for (var i=0; i<list.length; i++) {
+                        list[i].removeAttribute("id", "selected");
+                    }
+                    e.target.setAttribute("id", "selected");
+                    tagFilter(e.target.innerHTML);
+                })
+            }
+        </script>
     </body>
 </html>
